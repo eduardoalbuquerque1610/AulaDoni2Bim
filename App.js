@@ -1,49 +1,95 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, TextInput, Image} from 'react-native';
-import Feather from  '@expo/vector-icons/MaterialIcons';
+import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import Feather from '@expo/vector-icons/Feather';
+import { TextInput } from 'react-native-web';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      
-   
-      <View style={styles.viewHeader}>
 
-      <Feather name="menu" size={24} color="black" />
-      
-      <Text>Pelé filmes!</Text> 
 
-      <TouchableOpacity>
 
-      </TouchableOpacity>
+
+      {/* INICIO DA HEADER */}
+
+
+      <View style = {styles.viewHeader}>
+        <Feather name="menu" size={24} color="white" />
+        <Text style = {styles.titulo}> Pelé Filmes </Text>
+        <TouchableOpacity>
+
+        </TouchableOpacity>
 
       </View>
-   
+
+
+
+
+       {/* INICIO DA BARRA DE PESQUISA */}
+
+      <View style = {styles.input}>
+      <TextInput
+      placeholder='Digite o filme que deseja buscar'
+      ></TextInput>
+     
+      </View>
+
+     
+
+
+
+
+       {/* INICIO DO BANNER */}
+
+      
+
+
+
+
+
+
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
+
+
   container: {
     flex: 1,
-    backgroundColor: '#E0FFFF',
-    alignItems: 'center',
- 
-  },
-  viewHeader:{
-    flexDirection:'row',
-    width: "90%",
-    alignItems: 'center',
-    marginTop: 10,
-    justifyContent:'space-between',
-  },
+    backgroundColor: '#98fff6',
+    alignItems: 'center',  },
+    viewHeader: {
 
-  Textheader:{
+      //HEADER
+      
+      flexDirection : 'row',
+      width:"90%",
+      alignItems:'center',
+      marginTop:10,
+      justifyContent: 'space-between'
+    
+    
+    
+    },
+    // SEARCH BAR
+    input : {
+      marginTop: 20,
+      width: '90%',
+      backgroundColor: 'white',
+      borderRadius: 5,
+      padding: 8
 
-    fontSize:25,
-    color:'white',
-    fontWeight:'bold'
-  },
+    },
+    titulo : {
+      fontSize:25,
+      color:'Red',
+      fontWeight:'bold'
+    }
 
- 
+
+
+
 });
